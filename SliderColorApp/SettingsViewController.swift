@@ -66,6 +66,7 @@ class SettingsViewController: UIViewController {
         delegate.setColor(from: viewColor.backgroundColor ?? .blue)
         dismiss(animated: true)
     }
+    
 // MARK: - Private Methods
     private func changeColorView() {
     viewColor.backgroundColor = UIColor(red: CGFloat(redSlider.value),
@@ -110,5 +111,4 @@ class SettingsViewController: UIViewController {
         greenSlider.value = Float(color.green)
         blueSlider.value = Float(color.blue)
     }
-   
 }

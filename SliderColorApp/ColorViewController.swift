@@ -12,12 +12,6 @@ protocol SettingsVCDelegate {
 }
 
 class ColorViewController: UIViewController {
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
 // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,12 +19,11 @@ class ColorViewController: UIViewController {
         settingsVC.delegate = self
         settingsVC.acceptColor = view.backgroundColor
     }
-    
 }
+
 // MARK: - protocol SettingsVCDelegate
 extension ColorViewController: SettingsVCDelegate {
     func setColor(from color: UIColor) {
         view.backgroundColor = color
     }
-    
 }
